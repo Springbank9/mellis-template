@@ -1,60 +1,15 @@
-* {margin:0;}
-.container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  box-shadow: 0px 10px 24px 0px rgba(50, 50, 75, 0.49);
-  font-size: 0;
-  background: none;
-  margin: auto;
-  z-index: -1000;
-  padding-bottom: 55%;
+.jumbotron{
+  position: relative;
+  z-index:-101;
 }
 
-.container video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-    background-size: cover;
-    opacity: 0.7;
-
+#video-background { 
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    width:100%;
 }
-#bg-video {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	z-index: -9999;
-	width: auto;
-}
-
-#loader {
-	width: 120px;
-	position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -60%);
-    transform: translate(-50%, -60%);
-    display: none;
-    z-index: 10000;
-}
-
-#loader-text {
-	text-align: center;
-	font-size: 20px;
-	font-weight: 600;
-}
-
-#loader-image {
-	height: auto;
-	width: 100%;
-	display: block;
-}
-
-::-moz-selection { background: #eeffb0; color:black; }
-::selection { background: #eeffb0; color:black; }
