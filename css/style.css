@@ -13,3 +13,19 @@
     z-index: -100;
     width:100%;
 }
+
+.image1 {
+    background-image: url("/images/black-face-hill.jpeg");
+    opacity: 0.8;
+}
+
+.image2 {
+    background-image: url("/images/herd.jpg");
+    opacity: 0.8;
+
+}
+
+.image3 {
+    background-image: url("/images/heather.jpg");
+    opacity: 0.8;
+}
