@@ -16,8 +16,7 @@ nav .wrapper{
   position: relative;
   max-width: 1300px;
   padding: 0px 0px;
-  height: 90px;
-  line-height: 90px;
+  padding-top: 0;
   margin: auto;
   display: flex;
   align-items: center;
@@ -261,15 +260,22 @@ nav input{
   display: none;
 }
 
-  .hero-image {
-  background-image:  url("/images/brown-calf.jpeg")linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  .hero-image img {
   opacity: 0.8;
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-top: 50rem;
+  margin-top: 0;
+}
+
+img {
+    width: auto;
+    height: 75%;
+    padding: 50px 50px 50px 50px;
+      background-position: center;
+
 }
 
 .hero-text {
