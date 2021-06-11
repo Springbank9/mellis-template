@@ -1,4 +1,6 @@
-
+html, body {
+    background-color: white;
+}
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -287,6 +289,61 @@ a {
 Main Components 
 
 -------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1em;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  background-color: #261C21;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #383838;
+  background-color: #f8f8f8;
+}
+
+a {
+  color: #7b9d6f;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
 .cd-horizontal-timeline {
   opacity: 0;
   margin: 2em auto;
@@ -306,8 +363,8 @@ Main Components
 .cd-horizontal-timeline .timeline {
   position: relative;
   height: 100px;
-  width: 100%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 800px;
   margin: 0 auto;
 }
 .cd-horizontal-timeline .events-wrapper {
@@ -315,11 +372,6 @@ Main Components
   height: 100%;
   margin: 0 40px;
   overflow: hidden;
-}
-
-.cd-horizontal-timeline .events-wrapper ul {
-    text-decoration: none;
-    list-style-type: none;
 }
 .cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
   /* these are used to create a shadow effect at the sides of the timeline */
@@ -332,9 +384,13 @@ Main Components
 }
 .cd-horizontal-timeline .events-wrapper::before {
   left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
 }
 .cd-horizontal-timeline .events-wrapper::after {
   right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
 }
 .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */
@@ -344,12 +400,10 @@ Main Components
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #fff;
+  background: #dfdfdf;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
-  list-style-type: none
-  ;
 }
 .cd-horizontal-timeline .filling-line {
   /* this is used to create the green line filling the timeline */
@@ -359,7 +413,7 @@ Main Components
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #FF3D7F;
+  background-color: #7b9d6f;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -376,7 +430,6 @@ Main Components
 }
 .cd-horizontal-timeline .events a {
   position: absolute;
-  width:100px;
   bottom: 0;
   z-index: 2;
   text-align: center;
@@ -389,21 +442,7 @@ Main Components
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  color:white;
-  padding:5px;
-  margin-bottom:20px;
 }
-/* custom*/
-.cd-horizontal-timeline .events a::before {
-  content: '';
-  position: absolute;
-  width:1px;
-  height:20px;
-  background: #fff;
-  bottom:-20px;
-  left:50%;
-}
-
 .cd-horizontal-timeline .events a::after {
   /* this is used to create the event spot */
   content: '';
@@ -415,29 +454,29 @@ Main Components
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: -25px;
+  bottom: -5px;
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #fff;
+  border: 2px solid #dfdfdf;
+  background-color: #f8f8f8;
   -webkit-transition: background-color 0.3s, border-color 0.3s;
   -moz-transition: background-color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, border-color 0.3s;
 }
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #FF3D7F;
-  border-color: #fff;
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
 }
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
 }
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #FF3D7F;
-  border-color: #FF3D7F;
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
 }
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #FF3D7F;
+  border-color: #7b9d6f;
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
@@ -447,10 +486,6 @@ Main Components
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
   }
-}
-
-.cd-timeline-navigation ul {
-    list-style-type: none;
 }
 
 .cd-timeline-navigation a {
@@ -464,10 +499,10 @@ Main Components
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 30px;
-  width: 30px;
+  height: 34px;
+  width: 34px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #dfdfdf;
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
@@ -492,7 +527,7 @@ Main Components
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRw%0D%0AOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhl%0D%0AaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDE2IDMyIj48ZyAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUo%0D%0AMCwgMCkiPjxwb2x5Z29uIGZpbGw9IiM3YjlkNmYiIHBvaW50cz0iNiwxMy40IDQuNiwxMiA4LjYs%0D%0AOCA0LjYsNCA2LDIuNiAxMS40LDggIi8+PC9nPjxnICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAx%0D%0ANikiPjxwb2x5Z29uIGZpbGw9IiNkZmRmZGYiIHBvaW50cz0iNiwxMy40IDQuNiwxMiA4LjYsOCA0%0D%0ALjYsNCA2LDIuNiAxMS40LDggIi8+PC9nPjwvc3ZnPg==) no-repeat 0 0;
+  background: url(../img/cd-arrow.svg) no-repeat 0 0;
 }
 .cd-timeline-navigation a.prev {
   left: 0;
@@ -504,10 +539,9 @@ Main Components
 }
 .cd-timeline-navigation a.next {
   right: 0;
-  color: #fff;
 }
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #FF3D7F;
+  border-color: #7b9d6f;
 }
 .cd-timeline-navigation a.inactive {
   cursor: not-allowed;
@@ -516,16 +550,7 @@ Main Components
   background-position: 0 -16px;
 }
 .no-touch .cd-timeline-navigation a.inactive:hover {
-  border-color: #FF3D7F;
-}
-
-.events-content ul li {
-    list-style-type: none;
-}
-
-.cd-horizontal-timeline ul {
-        list-style-type: none;
-
+  border-color: #dfdfdf;
 }
 
 .cd-horizontal-timeline .events-content {
@@ -589,7 +614,8 @@ Main Components
 }
 .cd-horizontal-timeline .events-content h2 {
   font-weight: bold;
-  font-size: 3em !important;
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -602,8 +628,8 @@ Main Components
   content: '- ';
 }
 .cd-horizontal-timeline .events-content p {
-  font-size: 1.5em !important;
-  color: #fff;
+  font-size: 1.4rem;
+  color: #959595;
 }
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
@@ -613,7 +639,7 @@ Main Components
     font-size: 7rem;
   }
   .cd-horizontal-timeline .events-content em {
-    font-size: 1.5em !important;
+    font-size: 2rem;
   }
   .cd-horizontal-timeline .events-content p {
     font-size: 1.8rem;
@@ -695,80 +721,4 @@ Main Components
     -o-transform: translateX(0%);
     transform: translateX(0%);
   }
-}
-
-  .hero-image img {
-  opacity: 0.8;
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  margin-top: 0;
-}
-
-img {
-    width: auto;
-    height: 75%;
-    padding: 50px 50px 50px 50px;
-      background-position: center;
-
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
-}
-
-
-.jumbotron{
-  position: relative;
-  z-index:-101;
-}
-
-#video-background { 
-  position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-    width:100%;
-}
-
-.image1 {
-    background-image: url("/images/black-face-hill.jpeg");
-    opacity: 0.8;
-}
-
-.image2 {
-    background-image: url("/images/herd.jpg");
-    opacity: 0.8;
-
-}
-
-.image3 {
-    background-image: url("/images/heather.jpg");
-    opacity: 0.8;
 }
